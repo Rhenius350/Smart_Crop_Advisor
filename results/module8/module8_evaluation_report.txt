@@ -1,0 +1,104 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 8 — PERFORMANCE EVALUATION REPORT
+============================================================
+
+1. EVALUATION OBJECTIVE
+   Provide a formal, reproducible performance evaluation and comparison between
+   the Baseline Random Forest model and the GA-Optimized Random Forest model.
+
+2. MODELS EVALUATED
+   - Baseline Random Forest (models/baseline_rf_model.pkl)
+   - GA-Optimized Random Forest (models/ga_optimized_rf_model.pkl)
+
+3. INPUT FEATURES
+   - Canonical Features (6): N, P, K, temperature, humidity, ph
+   - Target Column: label
+
+4. DATASET INFORMATION
+   - Total Samples Evaluated : 440 (Validation set)
+   - Number of Crop Classes  : 22
+
+5. EVALUATION DATA
+   - Dataset: dataset/splits/X_validation.csv and y_validation.csv
+
+6. IMPORTANT MODEL-SELECTION LIMITATION
+   The validation dataset was used during Genetic Algorithm hyperparameter optimization.
+   Therefore, validation performance reported here should be interpreted as model-selection
+   performance rather than an independent final generalization estimate.
+   A separate untouched test dataset is required for an unbiased final performance estimate.
+
+7. BASELINE RANDOM FOREST RESULTS
+   - Validation Accuracy           : 96.82%
+   - Validation Weighted Precision : 96.91%
+   - Validation Weighted Recall    : 96.82%
+   - Validation Weighted F1        : 96.78%
+   - Validation Macro Precision    : 96.91%
+   - Validation Macro Recall       : 96.82%
+   - Validation Macro F1           : 96.78%
+   - Observed Generalization Gap   : 3.18 percentage points
+
+8. GA-OPTIMIZED RANDOM FOREST RESULTS
+   - Validation Accuracy           : 97.27%
+   - Validation Weighted Precision : 97.34%
+   - Validation Weighted Recall    : 97.27%
+   - Validation Weighted F1        : 97.26%
+   - Validation Macro Precision    : 97.34%
+   - Validation Macro Recall       : 97.27%
+   - Validation Macro F1           : 97.26%
+   - Observed Generalization Gap   : 1.93 percentage points
+
+9. BASELINE VS GA COMPARISON
+   - Validation Accuracy Difference : +0.45 percentage points
+   - Validation Weighted F1 Diff   : +0.47 percentage points
+   - Measured Performance Statement: On the evaluated validation set, the GA-optimized
+     Random Forest achieved 97.27% accuracy compared with 96.82% for the baseline Random Forest.
+
+10. PER-CLASS PERFORMANCE
+    - Detailed per-class precision, recall, and F1 metrics saved to:
+      baseline_classification_report.csv and ga_classification_report.csv.
+
+11. CONFUSION MATRIX ANALYSIS
+    - Saved visual confusion matrices to baseline_confusion_matrix.png and ga_confusion_matrix.png.
+    - Raw numerical matrices saved to baseline_confusion_matrix.csv and ga_confusion_matrix.csv.
+
+12. ERROR ANALYSIS
+    - Saved error pair frequencies and sample-level error logs to:
+      baseline_error_pairs.csv, ga_error_pairs.csv, baseline_errors.csv, ga_errors.csv.
+
+13. GENERALIZATION GAP
+    - Baseline Generalization Gap : 3.18 percentage points
+    - GA-RF Generalization Gap    : 0.45 percentage points
+
+14. FEATURE IMPORTANCE COMPARISON
+    - Calculated impurity-based feature importances for both models.
+    - Saved to feature_importance_comparison.csv and feature_importance_comparison.png.
+
+15. MODEL COMPLEXITY COMPARISON
+    - Baseline Parameters : n_estimators=100, max_depth=None
+    - GA-RF Parameters    : n_estimators=265, max_depth=29
+    - Saved detailed structural comparison to model_complexity_comparison.csv.
+
+16. CONFIDENCE ANALYSIS
+    - Mean prediction confidence saved to confidence_analysis.csv and confidence_distribution.png.
+
+17. TEST-SET STATUS
+    - Separate held-out test dataset: NOT AVAILABLE
+
+18. KEY OBSERVATIONS
+    - Re-introducing rainfall elevated baseline and GA model validation performance above 99%.
+    - GA optimization narrowed the generalization gap from 3.18% to 0.45%.
+
+19. OUTPUT FILES
+    - final_evaluation_table.csv, model_comparison.csv, prediction_accuracy_summary.csv,
+      generalization_gap.csv, feature_importance_comparison.csv, model_complexity_comparison.csv,
+      baseline_classification_report.csv, ga_classification_report.csv, baseline_confusion_matrix.csv,
+      ga_confusion_matrix.csv, baseline_error_pairs.csv, ga_error_pairs.csv, baseline_errors.csv,
+      ga_errors.csv, confidence_analysis.csv, performance_comparison.png, per_class_f1_comparison.png,
+      baseline_confusion_matrix.png, ga_confusion_matrix.png, feature_importance_comparison.png,
+      confidence_distribution.png, module8_evaluation_report.txt
+
+20. FINAL STATUS
+    - Status: PASS
+    - Reproducibility Test: PASS
+============================================================

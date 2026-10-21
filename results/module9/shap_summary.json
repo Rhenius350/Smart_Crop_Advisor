@@ -1,0 +1,50 @@
+{
+    "explainer": "SHAP TreeExplainer",
+    "dataset": "validation",
+    "number_of_samples": 440,
+    "feature_names": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph"
+    ],
+    "global_feature_importance": [
+        {
+            "feature": "humidity",
+            "mean_abs_shap": 0.03755880240376185,
+            "rank": 1
+        },
+        {
+            "feature": "K",
+            "mean_abs_shap": 0.03158045618492977,
+            "rank": 2
+        },
+        {
+            "feature": "N",
+            "mean_abs_shap": 0.030026433750460626,
+            "rank": 3
+        },
+        {
+            "feature": "P",
+            "mean_abs_shap": 0.02968632845902711,
+            "rank": 4
+        },
+        {
+            "feature": "temperature",
+            "mean_abs_shap": 0.014380225711166428,
+            "rank": 5
+        },
+        {
+            "feature": "ph",
+            "mean_abs_shap": 0.00690766172948356,
+            "rank": 6
+        }
+    ],
+    "top_features": [
+        "humidity",
+        "K",
+        "N"
+    ]
+}

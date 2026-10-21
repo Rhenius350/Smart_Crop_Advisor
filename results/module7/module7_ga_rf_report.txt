@@ -1,0 +1,103 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 7 — GA-OPTIMIZED RANDOM FOREST REPORT
+============================================================
+
+1. MODEL OBJECTIVE
+   Train a dedicated GA-optimized Random Forest model using the best
+   hyperparameters discovered in Module 6 and evaluate its validation performance.
+
+2. INPUT DATA
+   - Training Set   : dataset/splits/X_train.csv (1760 samples)
+   - Validation Set : dataset/splits/X_validation.csv (440 samples)
+
+3. FEATURE CONFIGURATION
+   - Features (6) : N, P, K, temperature, humidity, ph
+   - Target Column : label
+
+4. DATA VALIDATION
+   - Verified presence of all 7 canonical features (including rainfall).
+   - Sample counts: 1760 train, 440 validation.
+   - Verified 22 unique crop classes.
+
+5. GA PARAMETERS USED
+   - Source File        : results/module6/best_parameters.json
+   - n_estimators       : 265
+   - max_depth          : 29
+   - min_samples_split  : 3
+   - min_samples_leaf   : 4
+   - max_features       : sqrt
+
+6. RANDOM FOREST CONFIGURATION
+   - Criterion          : gini
+   - Bootstrap          : True
+   - Random State       : 42
+   - n_jobs             : -1
+
+7. TRAINING
+   - Model fitted strictly on X_train and y_train (1760 samples).
+   - Training Accuracy : 100.00%
+   - Training Weighted F1 : 100.00%
+
+8. VALIDATION
+   - Evaluated strictly on X_validation (440 samples).
+
+9. PERFORMANCE RESULTS
+   - Validation Accuracy           : 97.27%
+   - Validation Weighted Precision : 97.34%
+   - Validation Weighted Recall    : 97.27%
+   - Validation Weighted F1        : 97.26%
+   - Validation Macro Precision    : 97.34%
+   - Validation Macro Recall       : 97.27%
+   - Validation Macro F1           : 97.26%
+
+10. TRAIN-VALIDATION GENERALIZATION GAP
+   - Training Accuracy             : 99.20%
+   - Validation Accuracy           : 97.27%
+   - Observed Generalization Gap   : 1.93 percentage points
+
+11. FEATURE IMPORTANCE
+   - humidity        : 0.2759 (27.59%)
+   - K               : 0.2223 (22.23%)
+   - P               : 0.1861 (18.61%)
+   - N               : 0.1335 (13.35%)
+   - temperature     : 0.1103 (11.03%)
+   - ph              : 0.0718 (7.18%)
+
+12. BASELINE VS GA-OPTIMIZED COMPARISON
+   - Baseline Accuracy (Module 5)  : 96.82%
+   - GA-RF Accuracy (Module 7)     : 97.27%
+   - Accuracy Difference           : +0.45 percentage points
+   - Baseline Weighted F1          : 96.78%
+   - GA-RF Weighted F1             : 97.26%
+   - Weighted F1 Difference        : +0.47 percentage points
+   - Baseline Model Size           : 5.32 MB
+   - GA-RF Model Size              : 9.67 MB
+
+13. CONFUSION MATRIX
+   - Generated and saved to ga_rf_confusion_matrix.png.
+   - Shows 22x22 classification matrix across all crop categories.
+
+14. MODEL SERIALIZATION
+   - Saved artifact: models/ga_optimized_rf_model.pkl
+   - Metadata saved: models/ga_optimized_rf_metadata.json
+   - Serialization Test: PASS
+
+15. REPRODUCIBILITY TEST
+   - Reproducibility Pass: PASS
+
+16. OUTPUT FILES
+   - ga_rf_metrics.csv
+   - ga_rf_predictions.csv
+   - classification_report.csv
+   - ga_rf_feature_importance.csv
+   - baseline_vs_ga_rf.csv
+   - ga_rf_summary.json
+   - ga_rf_confusion_matrix.png
+   - ga_rf_feature_importance.png
+   - baseline_vs_ga_rf.png
+   - module7_ga_rf_report.txt
+
+17. FINAL STATUS
+   - Status: PASS
+============================================================

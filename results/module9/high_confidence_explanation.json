@@ -1,0 +1,14 @@
+{
+    "sample_index": 91,
+    "actual_crop": "mungbean",
+    "predicted_crop": "mungbean",
+    "confidence": 1.0,
+    "feature_values": {
+        "N": 28.0,
+        "P": 46.0,
+        "K": 16.0,
+        "temperature": 29.008124,
+        "humidity": 84.96089355,
+        "ph": 6.664187809
+    }
+}

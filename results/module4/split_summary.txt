@@ -1,0 +1,31 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 4 — TRAIN / VALIDATION SPLIT SUMMARY
+============================================================
+Dataset             : D:\Documents\review project\dataset\processed\crop_data_clean.csv
+Original Samples    : 2200
+Number of Features  : 6
+Number of Crop Class: 22
+Split Ratio         : 80% Training / 20% Validation
+Random State        : 42
+Stratification      : Enabled
+
+Training Samples    : 1760 (80.0%)
+Validation Samples  : 440 (20.0%)
+Training Features   : 6
+Validation Features : 6
+Training Classes    : 22
+Validation Classes  : 22
+
+============================================================
+INTEGRITY CHECKS
+============================================================
+Sample count alignment  : PASS
+Feature count alignment : PASS
+Target alignment        : PASS
+Class representation    : PASS (All 22 classes present in both splits)
+Train/Validation overlap: PASS (0 overlapping records)
+Reproducibility test    : PASS
+------------------------------------------------------------
+FINAL STATUS            : PASS
+============================================================

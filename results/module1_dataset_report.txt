@@ -1,0 +1,39 @@
+============================================================
+SMART CROP ADVISOR — MODULE 1 DATASET REPORT
+============================================================
+Dataset File Path     : dataset/Crop_recommendation.csv
+Dataset Loaded        : YES
+Dataset Shape         : 2200 Rows x 8 Columns
+Expected Columns      : PASS
+Numeric Features Check: PASS
+Target Column Check   : PASS (22 classes)
+Missing Values Count  : 0 (PASS)
+Duplicate Rows Count  : 0 (PASS)
+Number of Crop Classes: 22
+------------------------------------------------------------
+OVERALL DATASET STATUS : PASS
+============================================================
+
+Detailed Crop Class Distribution:
+  - rice               : 100 samples
+  - maize              : 100 samples
+  - chickpea           : 100 samples
+  - kidneybeans        : 100 samples
+  - pigeonpeas         : 100 samples
+  - mothbeans          : 100 samples
+  - mungbean           : 100 samples
+  - blackgram          : 100 samples
+  - lentil             : 100 samples
+  - pomegranate        : 100 samples
+  - banana             : 100 samples
+  - mango              : 100 samples
+  - grapes             : 100 samples
+  - watermelon         : 100 samples
+  - muskmelon          : 100 samples
+  - apple              : 100 samples
+  - orange             : 100 samples
+  - papaya             : 100 samples
+  - coconut            : 100 samples
+  - cotton             : 100 samples
+  - jute               : 100 samples
+  - coffee             : 100 samples

@@ -1,0 +1,14 @@
+{
+    "sample_index": 60,
+    "actual_crop": "lentil",
+    "predicted_crop": "blackgram",
+    "confidence": 0.5473715487866432,
+    "feature_values": {
+        "N": 27.0,
+        "P": 80.0,
+        "K": 24.0,
+        "temperature": 28.42062847,
+        "humidity": 61.77336343,
+        "ph": 7.815210661
+    }
+}

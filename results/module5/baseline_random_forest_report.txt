@@ -1,0 +1,82 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 5 — BASELINE RANDOM FOREST REPORT
+============================================================
+
+1. MODEL OBJECTIVE
+Establish an unoptimized reference Random Forest classifier before Genetic Algorithm optimization.
+
+2. INPUT DATA
+Training dataset path  : D:\Documents\review project\dataset\splits\X_train.csv
+Validation dataset path: D:\Documents\review project\dataset\splits\X_validation.csv
+Training samples       : 1760
+Validation samples     : 440
+Number of features     : 6
+Number of crop classes : 22
+
+3. FEATURES ANALYZED
+  - N
+  - P
+  - K
+  - temperature
+  - humidity
+  - ph
+
+4. TARGET
+Target column: label
+
+5. TARGET ENCODING
+LabelEncoder fitted ONLY on training labels to prevent target leakage.
+
+6. BASELINE RANDOM FOREST CONFIGURATION
+n_estimators : 100
+criterion    : gini
+random_state : 42
+n_jobs       : -1
+
+7. TRAINING
+Model trained strictly using X_train and y_train_encoded.
+
+8. VALIDATION
+Validation data used purely for evaluation without retraining.
+
+9. PERFORMANCE RESULTS
+Training Accuracy              : 100.00%
+Validation Accuracy            : 96.82%
+Validation Precision (Weighted): 96.91%
+Validation Recall (Weighted)   : 96.82%
+Validation F1-Score (Weighted) : 96.78%
+Validation Precision (Macro)   : 96.91%
+Validation Recall (Macro)      : 96.82%
+Validation F1-Score (Macro)    : 96.78%
+Train vs Val Accuracy Gap      : 3.18%
+
+10. MODEL FEATURE IMPORTANCE (GINI IMPURITY REDUCTION)
+  1. humidity       : 0.2605 (26.05%)
+  2. K              : 0.2199 (21.99%)
+  3. P              : 0.1827 (18.27%)
+  4. N              : 0.1373 (13.73%)
+  5. temperature    : 0.1169 (11.69%)
+  6. ph             : 0.0828 (8.28%)
+
+11. OVERFITTING OBSERVATION
+A train-val accuracy gap of 3.18% is observed. Baseline Random Forest fits training data closely; Genetic Algorithm hyperparameter optimization in Module 6 will aim to balance generalization performance.
+
+12. SERIALIZED MODEL ARTIFACTS
+  - Model   : D:\Documents\review project\models\baseline_rf_model.pkl
+  - Encoder : D:\Documents\review project\models\crop_label_encoder.pkl
+  - Metadata: D:\Documents\review project\models\baseline_model_metadata.json
+
+13. RESULTS FILES
+  - D:\Documents\review project\results\module5\baseline_metrics.csv
+  - D:\Documents\review project\results\module5\baseline_predictions.csv
+  - D:\Documents\review project\results\module5\classification_report.csv
+  - D:\Documents\review project\results\module5\baseline_feature_importance.csv
+  - D:\Documents\review project\results\module5\baseline_summary.json
+
+14. REPRODUCIBILITY TEST
+Status: PASS
+
+15. FINAL STATUS
+PASS
+============================================================

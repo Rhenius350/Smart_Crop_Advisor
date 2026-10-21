@@ -1,0 +1,10 @@
+{
+    "n_estimators": 265,
+    "max_depth": 29,
+    "min_samples_split": 3,
+    "min_samples_leaf": 4,
+    "max_features": "sqrt",
+    "criterion": "gini",
+    "bootstrap": true,
+    "random_state": 42
+}

@@ -1,0 +1,45 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 3 — FEATURE ANALYSIS REPORT
+============================================================
+
+1. DATASET OVERVIEW
+Dataset File Path     : D:\Documents\review project\dataset\processed\crop_data_clean.csv
+Rows (Samples)        : 2200
+Columns               : 7
+Number of features    : 6
+Number of crop classes: 22
+
+2. FEATURES ANALYZED
+  - N
+  - P
+  - K
+  - temperature
+  - humidity
+  - ph
+
+3. DESCRIPTIVE STATISTICS
+  - N           : Mean=50.55, Median=37.00, Std=36.92, Min=0.00, Max=140.00, IQR=63.25
+  - P           : Mean=53.36, Median=51.00, Std=32.99, Min=5.00, Max=145.00, IQR=40.00
+  - K           : Mean=48.15, Median=32.00, Std=50.65, Min=5.00, Max=205.00, IQR=29.00
+  - temperature : Mean=25.62, Median=25.60, Std=5.06, Min=8.83, Max=43.68, IQR=5.79
+  - humidity    : Mean=71.48, Median=80.47, Std=22.26, Min=14.26, Max=99.98, IQR=29.69
+  - ph          : Mean=6.47, Median=6.43, Std=0.77, Min=3.50, Max=9.94, IQR=0.95
+
+4. MUTUAL INFORMATION ANALYSIS
+Highest information association: 'humidity' (MI score = 1.7300)
+Mutual Information Ranking:
+  1. humidity        : 1.7300
+  2. K               : 1.6505
+  3. P               : 1.3001
+  4. temperature     : 1.0179
+  5. N               : 1.0049
+  6. ph              : 0.6861
+
+5. FEATURE SELECTION STATUS
+No features were removed.
+All six agricultural features (N, P, K, temperature, humidity, ph) are retained for subsequent modules.
+
+6. FINAL STATUS
+PASS
+============================================================

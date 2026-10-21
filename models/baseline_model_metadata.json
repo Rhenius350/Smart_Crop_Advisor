@@ -1,0 +1,60 @@
+{
+    "model_type": "RandomForestClassifier",
+    "model_purpose": "Baseline crop recommendation classifier prior to GA optimization",
+    "feature_names": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph"
+    ],
+    "target_column": "label",
+    "num_features": 6,
+    "num_classes": 22,
+    "classes": [
+        "apple",
+        "banana",
+        "blackgram",
+        "chickpea",
+        "coconut",
+        "coffee",
+        "cotton",
+        "grapes",
+        "jute",
+        "kidneybeans",
+        "lentil",
+        "maize",
+        "mango",
+        "mothbeans",
+        "mungbean",
+        "muskmelon",
+        "orange",
+        "papaya",
+        "pigeonpeas",
+        "pomegranate",
+        "rice",
+        "watermelon"
+    ],
+    "hyperparameters": {
+        "n_estimators": 100,
+        "criterion": "gini",
+        "random_state": 42,
+        "n_jobs": -1
+    },
+    "num_training_samples": 1760,
+    "num_validation_samples": 440,
+    "created_at": "2026-10-05T20:59:16.987550",
+    "metrics": {
+        "training_accuracy": 1.0,
+        "validation_accuracy": 0.9681818181818181,
+        "training_f1_weighted": 1.0,
+        "validation_f1_weighted": 0.9678369937870789,
+        "validation_precision_weighted": 0.969089906089334,
+        "validation_recall_weighted": 0.9681818181818181,
+        "validation_precision_macro": 0.9690899060893341,
+        "validation_recall_macro": 0.9681818181818183,
+        "validation_f1_macro": 0.967836993787079,
+        "accuracy_gap": 0.03181818181818186
+    }
+}

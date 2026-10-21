@@ -1,0 +1,17 @@
+{
+    "total_validation_samples": 440,
+    "correct_predictions": 428,
+    "incorrect_predictions": 12,
+    "number_of_classes": 22,
+    "number_of_features": 6,
+    "feature_names": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph"
+    ],
+    "number_of_local_explanations": 5,
+    "random_state": 42
+}

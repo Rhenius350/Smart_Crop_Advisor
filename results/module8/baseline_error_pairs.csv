@@ -1,0 +1,8 @@
+actual_crop,predicted_crop,error_count
+lentil,blackgram,4
+rice,jute,3
+jute,rice,2
+mothbeans,pigeonpeas,2
+blackgram,maize,1
+lentil,mothbeans,1
+pigeonpeas,lentil,1

@@ -1,0 +1,115 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 6 — GENETIC ALGORITHM OPTIMIZATION REPORT
+============================================================
+
+1. MODULE OBJECTIVE
+   Perform Genetic Algorithm hyperparameter optimization for Random Forest
+   maximizing validation weighted F1-score across 10 generations.
+
+2. INPUT DATA
+   - Training Set   : dataset/splits/X_train.csv (1760 samples)
+   - Validation Set : dataset/splits/X_validation.csv (440 samples)
+
+3. FEATURE CONFIGURATION
+   - Number of features : 6
+   - Feature names      : N, P, K, temperature, humidity, ph
+   - Target column      : label
+
+4. DATA VALIDATION
+   - Checked column existence across all split files.
+   - Verified presence of rainfall feature in X_train.csv and X_validation.csv.
+   - Confirmed row counts (1760 training, 440 validation).
+   - Verified 22 unique crop classes.
+
+5. DATA LEAKAGE PREVENTION
+   - Candidate models were trained strictly on X_train and y_train.
+   - Validation data (X_validation, y_validation) was used strictly for fitness evaluation.
+   - Encoder fitted strictly on training labels.
+   - No access to test data, LIME, SHAP, or external data.
+
+6. BASELINE RANDOM FOREST REFERENCE
+   - Baseline Accuracy           : 96.82%
+   - Baseline Weighted Precision : 96.91%
+   - Baseline Weighted Recall    : 96.82%
+   - Baseline Weighted F1        : 96.78%
+   - Baseline Macro F1           : 96.78%
+
+7. GENETIC ALGORITHM CONFIGURATION
+   - Population Size   : 20
+   - Generations       : 10
+   - Crossover Rate    : 0.8
+   - Mutation Rate     : 0.2
+   - Elite Count       : 1
+   - Tournament Size   : 3
+   - Random Seed       : 42
+
+8. CHROMOSOME REPRESENTATION
+   - Structure: [n_estimators, max_depth, min_samples_split, min_samples_leaf, max_features]
+
+9. HYPERPARAMETER SEARCH SPACE
+   - n_estimators     : [50, 300]
+   - max_depth        : [5, 30]
+   - min_samples_split: [2, 20]
+   - min_samples_leaf : [1, 10]
+   - max_features     : ['sqrt', 'log2']
+
+10. FITNESS FUNCTION
+   - Objective        : MAXIMIZE Validation Weighted F1-Score
+
+11. SELECTION METHOD
+   - Tournament Selection (Tournament Size = 3)
+
+12. CROSSOVER METHOD
+   - Single-Point Crossover (Probability = 0.8)
+
+13. MUTATION METHOD
+   - Random Gene Perturbation & Repair (Probability = 0.2)
+
+14. ELITISM
+   - Preserve best 1 individual per generation.
+
+15. GENERATION RESULTS
+   - Total Generations Executed : 10
+   - Total Chromosomes Evaluated: 200
+
+16. BEST GA CANDIDATE
+   - n_estimators                 : 265
+   - max_depth                    : 29
+   - min_samples_split            : 3
+   - min_samples_leaf             : 4
+   - max_features                 : sqrt
+   - Validation Accuracy          : 97.27%
+   - Validation Weighted Precision: 97.34%
+   - Validation Weighted Recall   : 97.27%
+   - Validation Weighted F1       : 97.26%
+   - Validation Macro F1          : 97.26%
+
+17. BASELINE VS GA COMPARISON
+   - Baseline Weighted F1         : 96.78%
+   - GA Candidate Weighted F1     : 97.26%
+   - F1 Difference                : +0.47 percentage points
+
+18. CONVERGENCE ANALYSIS
+   - Graph generated at ga_convergence.png.
+   - Shows evolution of Best Fitness and Average Fitness across generations.
+
+19. FITNESS CACHE STATISTICS
+   - Total Evaluations  : 200
+   - Unique Evaluations : 75
+   - Cached Evaluations : 125
+
+20. OUTPUT FILES
+   - best_parameters.json
+   - ga_configuration.json
+   - generation_metrics.csv
+   - population_history.csv
+   - baseline_vs_ga.csv
+   - fitness_cache_summary.json
+   - ga_convergence.png
+   - module6_ga_report.txt
+
+21. FINAL STATUS
+   - Status               : PASS
+   - Reproducibility Check: PASS
+============================================================

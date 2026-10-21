@@ -1,0 +1,83 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 2 — DATA PREPROCESSING REPORT
+============================================================
+
+1. INPUT DATASET
+Path: D:\Documents\review project\dataset\Crop_recommendation.csv
+Original rows: 2200
+Original columns: 8
+
+2. COLUMN VALIDATION
+Status: PASS
+Expected columns: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'label']
+Missing columns: []
+Unexpected columns: ['rainfall']
+
+3. DATA TYPE VALIDATION
+Status: PASS
+Numeric features valid: True
+Target categorical valid: True
+
+4. MISSING VALUE ANALYSIS
+Total missing values: 0
+Missing values breakdown: {'N': 0, 'P': 0, 'K': 0, 'temperature': 0, 'humidity': 0, 'ph': 0, 'rainfall': 0, 'label': 0}
+Imputation performed: NONE (dataset is complete)
+
+5. DUPLICATE ANALYSIS
+Original rows: 2200
+Duplicate rows detected: 0
+Processed rows remaining: 2200
+Action taken: No duplicates found
+
+6. INVALID VALUE ANALYSIS
+Total invalid values: 0
+Invalid breakdown: {'N': 0, 'P': 0, 'K': 0, 'humidity': 0, 'ph': 0}
+
+7. OUTLIER ANALYSIS (IQR METHOD)
+Total potential outliers detected: 511
+Outliers per feature: {'N': 0, 'P': 138, 'K': 200, 'temperature': 86, 'humidity': 30, 'ph': 57}
+Action taken: Potential outliers retained without deletion (agricultural variation preserved)
+
+8. DATA CONSISTENCY
+Unique crop classes: 22
+Whitespace clean action: Already clean
+Crop classes list: ['apple', 'banana', 'blackgram', 'chickpea', 'coconut', 'coffee', 'cotton', 'grapes', 'jute', 'kidneybeans', 'lentil', 'maize', 'mango', 'mothbeans', 'mungbean', 'muskmelon', 'orange', 'papaya', 'pigeonpeas', 'pomegranate', 'rice', 'watermelon']
+
+9. FEATURE SUMMARY (UNSCALED)
+  - N           : Min=0.00, Max=140.00, Mean=50.55, Median=37.00, Std=36.92
+  - P           : Min=5.00, Max=145.00, Mean=53.36, Median=51.00, Std=32.99
+  - K           : Min=5.00, Max=205.00, Mean=48.15, Median=32.00, Std=50.65
+  - temperature : Min=8.83, Max=43.68, Mean=25.62, Median=25.60, Std=5.06
+  - humidity    : Min=14.26, Max=99.98, Mean=71.48, Median=80.47, Std=22.26
+  - ph          : Min=3.50, Max=9.94, Mean=6.47, Median=6.43, Std=0.77
+
+10. TARGET SUMMARY
+Target column: label
+Number of classes: 22
+Class encoding: Retained as human-readable strings (no target encoding in Module 2)
+
+11. PREPROCESSING OPERATIONS PERFORMED
+✓ Raw dataset loaded and schema verified
+✓ Exact duplicate row detection and removal (if any)
+✓ Whitespace check and trimming on target crop labels
+✓ Invalid numeric and bound validation
+✓ IQR outlier analysis performed and logged
+✓ Processed clean dataset saved to dataset/processed/crop_data_clean.csv
+
+12. PREPROCESSING OPERATIONS NOT PERFORMED (BY DESIGN)
+✓ No numerical feature scaling or normalization (Random Forest does not require scaling)
+✓ No automatic outlier removal (agricultural measurement validity preserved)
+✓ No target label encoding (deferred to model training module)
+✓ No feature selection or feature dropping
+✓ No train/validation split (preventing data leakage)
+✓ No model fitting or hyperparameter optimization
+
+13. OUTPUT DATASET
+Path: D:\Documents\review project\dataset\processed\crop_data_clean.csv
+Processed rows: 2200
+Processed columns: 8
+
+14. FINAL STATUS
+PASS
+============================================================

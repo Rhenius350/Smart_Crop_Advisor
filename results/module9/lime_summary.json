@@ -1,0 +1,14 @@
+{
+    "explainer_type": "LimeTabularExplainer",
+    "background_dataset": "X_train",
+    "number_of_local_explanations": 5,
+    "feature_names": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph"
+    ],
+    "random_state": 42
+}

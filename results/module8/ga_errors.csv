@@ -1,0 +1,13 @@
+sample_index,actual_crop,predicted_crop,prediction_confidence
+60,lentil,blackgram,0.5473715487866432
+175,lentil,blackgram,0.4829533150287865
+178,blackgram,maize,0.4706343761060742
+207,lentil,mothbeans,0.3462250747156409
+267,jute,rice,0.6238239904749339
+285,mothbeans,pigeonpeas,0.6571145102277178
+396,mothbeans,pigeonpeas,0.5945511511549247
+398,rice,jute,0.511785138341742
+399,pigeonpeas,lentil,0.43024459816912647
+413,lentil,blackgram,0.38734280394657755
+419,jute,rice,0.5871897426780887
+432,mango,mothbeans,0.416350591078671

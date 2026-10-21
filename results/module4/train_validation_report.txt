@@ -1,0 +1,68 @@
+============================================================
+SMART CROP ADVISOR
+MODULE 4 — TRAIN / VALIDATION SPLIT DETAILED REPORT
+============================================================
+1. Dataset Source        : D:\Documents\review project\dataset\processed\crop_data_clean.csv
+2. Total Dataset Shape   : 2200 rows x 7 columns
+3. Feature Columns (6)   : ['N', 'P', 'K', 'temperature', 'humidity', 'ph']
+4. Target Column         : 'label'
+5. Original Class Count  : 22 classes
+6. Split Ratio           : 80% Train / 20% Validation
+7. Random State          : 42
+8. Stratification Status : Enabled (stratify=y)
+9. Training Set Shape    : 1760 rows x 6 features
+10. Validation Set Shape : 440 rows x 6 features
+
+11. CLASS DISTRIBUTION COMPARISON (SAMPLE COUNTS & PERCENTAGES)
+  - apple          : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - banana         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - blackgram      : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - chickpea       : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - coconut        : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - coffee         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - cotton         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - grapes         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - jute           : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - kidneybeans    : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - lentil         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - maize          : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - mango          : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - mothbeans      : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - mungbean       : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - muskmelon      : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - orange         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - papaya         : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - pigeonpeas     : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - pomegranate    : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - rice           : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+  - watermelon     : Full=100 (4.55%), Train=80 (4.55%), Val=20 (4.55%)
+
+12. INTEGRITY CHECKS
+✓ Total Sample Sum Check : 1760 + 440 = 2200 (PASS)
+✓ Feature Count Check    : 6 features in both X_train and X_validation (PASS)
+✓ Target Alignment Check : len(X_train)==len(y_train) and len(X_val)==len(y_val) (PASS)
+✓ Class Representation   : All 22 crops present in train and validation (PASS)
+✓ Data Overlap Check     : 0 overlapping feature records (PASS)
+✓ Reproducibility Check  : Stratified split produces identical outputs given seed=42 (PASS)
+
+13. DATA LEAKAGE CHECKS
+✓ Split performed BEFORE any scaling, feature selection, or hyperparameter fitting
+✓ Original processed dataset remains 100% untouched
+✓ Features retained in original units without global normalization
+✓ Target labels preserved as human-readable string crop names
+
+14. FILES GENERATED
+  - dataset/splits/X_train.csv
+  - dataset/splits/X_validation.csv
+  - dataset/splits/y_train.csv
+  - dataset/splits/y_validation.csv
+  - dataset/splits/train.csv
+  - dataset/splits/validation.csv
+  - results/module4/pre_split_class_distribution.csv
+  - results/module4/class_distribution_comparison.csv
+  - results/module4/split_summary.txt
+  - results/module4/train_validation_report.txt
+
+15. FINAL STATUS
+PASS
+============================================================

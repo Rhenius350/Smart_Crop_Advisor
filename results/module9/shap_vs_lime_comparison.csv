@@ -1,0 +1,6 @@
+sample_index,actual_crop,predicted_crop,shap_top_feature_1,shap_top_feature_2,shap_top_feature_3,lime_top_feature_1,lime_top_feature_2,lime_top_feature_3
+91,mungbean,mungbean,humidity,K,P,humidity,K,N
+207,lentil,mothbeans,humidity,K,N,humidity,K,N
+60,lentil,blackgram,humidity,P,K,humidity,P,K
+330,mango,mango,humidity,K,P,humidity,P,K
+57,papaya,papaya,humidity,K,P,humidity,P,K

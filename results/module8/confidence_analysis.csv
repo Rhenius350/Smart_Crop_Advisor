@@ -1,0 +1,3 @@
+model,mean_confidence,median_confidence
+Baseline_RF,0.9143863636363636,0.98
+GA_Optimized_RF,0.8886410668509789,0.9565074600451959

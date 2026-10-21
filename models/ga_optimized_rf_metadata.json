@@ -1,0 +1,38 @@
+{
+    "model_name": "GA-Optimized Random Forest",
+    "model_type": "RandomForestClassifier",
+    "feature_columns": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph"
+    ],
+    "target_column": "label",
+    "num_features": 6,
+    "num_classes": 22,
+    "training_samples": 1760,
+    "validation_samples": 440,
+    "ga_parameters": {
+        "n_estimators": 265,
+        "max_depth": 29,
+        "min_samples_split": 3,
+        "min_samples_leaf": 4,
+        "max_features": "sqrt",
+        "criterion": "gini",
+        "bootstrap": true,
+        "random_state": 42
+    },
+    "training_accuracy": 0.9920454545454546,
+    "validation_accuracy": 0.9727272727272728,
+    "validation_weighted_precision": 0.973367546235545,
+    "validation_weighted_recall": 0.9727272727272728,
+    "validation_weighted_f1": 0.9725604981702545,
+    "validation_macro_precision": 0.9733675462355452,
+    "validation_macro_recall": 0.9727272727272727,
+    "validation_macro_f1": 0.9725604981702541,
+    "train_validation_accuracy_gap": 0.01931818181818179,
+    "model_file": "models\\ga_optimized_rf_model.pkl",
+    "random_state": 42
+}

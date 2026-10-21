@@ -1,0 +1,14 @@
+{
+    "sample_index": 207,
+    "actual_crop": "lentil",
+    "predicted_crop": "mothbeans",
+    "confidence": 0.3462250747156409,
+    "feature_values": {
+        "N": 31.0,
+        "P": 58.0,
+        "K": 15.0,
+        "temperature": 28.31886863,
+        "humidity": 60.19461399,
+        "ph": 6.167855382
+    }
+}

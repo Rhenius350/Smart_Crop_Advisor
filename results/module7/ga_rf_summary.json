@@ -1,0 +1,37 @@
+{
+    "model": "GA-Optimized Random Forest",
+    "features": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph"
+    ],
+    "training_samples": 1760,
+    "validation_samples": 440,
+    "num_classes": 22,
+    "best_ga_parameters": {
+        "n_estimators": 265,
+        "max_depth": 29,
+        "min_samples_split": 3,
+        "min_samples_leaf": 4,
+        "max_features": "sqrt",
+        "criterion": "gini",
+        "bootstrap": true,
+        "random_state": 42
+    },
+    "training_accuracy": 0.9920454545454546,
+    "validation_accuracy": 0.9727272727272728,
+    "weighted_precision": 0.973367546235545,
+    "weighted_recall": 0.9727272727272728,
+    "weighted_f1": 0.9725604981702545,
+    "macro_precision": 0.9733675462355452,
+    "macro_recall": 0.9727272727272727,
+    "macro_f1": 0.9725604981702541,
+    "train_validation_gap": 0.01931818181818179,
+    "baseline_accuracy": 0.968181818181818,
+    "baseline_weighted_f1": 0.9678369937870788,
+    "accuracy_difference": 0.004545454545454741,
+    "weighted_f1_difference": 0.004723504383175703
+}
